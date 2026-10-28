@@ -17,4 +17,12 @@ describe("lógica do contador", () => {
   it("zera o valor", () => {
     expect(zerar()).toBe(0);
   });
+
+  it("não deixa o valor ficar negativo", () => {
+    expect(decrementar(0)).toBe(0);
+  });
+
+  it("para em 0 mesmo com passo maior que o valor", () => {
+    expect(decrementar(3, 10)).toBe(0);
+  });
 });
