@@ -3,7 +3,7 @@ export function incrementar(valor: number, passo = 1): number {
 }
 
 export function decrementar(valor: number, passo = 1): number {
-  return valor - passo;
+  return Math.max(0, valor - passo);
 }
 
 export function zerar(): number {
