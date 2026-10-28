@@ -15,6 +15,12 @@ describe("tela do contador", () => {
     expect(screen.getByTestId("valor")).toHaveTextContent("1");
   });
 
+  it("soma 10 ao clicar em +10", async () => {
+    render(<Contador />);
+    await userEvent.click(screen.getByRole("button", { name: "+10" }));
+    expect(screen.getByTestId("valor")).toHaveTextContent("10");
+  });
+
   it("volta pra 0 ao clicar em Zerar", async () => {
     render(<Contador />);
     await userEvent.click(screen.getByRole("button", { name: "+1" }));

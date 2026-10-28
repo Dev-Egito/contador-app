@@ -17,6 +17,7 @@ export default function Contador() {
         <button onClick={() => setValor(decrementar(valor))}>-1</button>
         <button onClick={() => setValor(zerar())}>Zerar</button>
         <button onClick={() => setValor(incrementar(valor))}>+1</button>
+        <button onClick={() => setValor(incrementar(valor, 10))}>+10</button>
       </div>
     </div>
   );
